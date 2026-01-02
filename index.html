@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Seiya Formation Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- Animated Starfield Background -->
+    <div class="starfield-bg"></div>
+
+    <!-- Application Header -->
+    <header class="app-header">
+        <div class="header-brand">
+            <svg class="pegasus-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L17 7v8l-5 3-5-3V7l5-2.5zM6 9l5 2.5v6l-5-3V9zm12 0v6l-5 3V11.5L18 9z"/>
+                <path d="M12 10a3 3 0 100 6 3 3 0 000-6z"/>
+            </svg>
+            <div class="header-title">
+                <h1>Saint Formation</h1>
+                <span>Strategic Engine</span>
+            </div>
+        </div>
+
+        <!-- Mode Selection -->
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="setMode(1)">1 Time</button>
+            <button class="mode-btn" onclick="setMode(2)">2 Times</button>
+            <button class="mode-btn" onclick="setMode(3)">3 Times</button>
+            <button class="mode-btn" onclick="setMode(4)">4 Times</button>
+            <div class="mode-divider"></div>
+            <button class="mode-btn boss-btn" onclick="setMode('boss')">👑 BOSS</button>
+            <button class="config-btn" onclick="openConfigModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                </svg>
+                Configurar
+            </button>
+            <button class="reset-btn" onclick="resetAllSelections()" title="Limpar Todas as Seleções">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                    <path d="M3 3v5h5"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Battle Dashboard -->
+    <main class="battle-dashboard">
+        <!-- Enemy Teams Panel -->
+        <section class="team-panel enemy-side">
+            <div class="panel-header">
+                <h2 id="enemy-panel-title">Ameaça</h2>
+            </div>
+            <div id="enemy-teams-container">
+                <!-- Teams injected by JS -->
+            </div>
+        </section>
+
+        <!-- Center Control Panel -->
+        <aside class="control-center">
+            <div class="vs-badge">VS</div>
+            <div class="quick-stats">
+                <h3>Resumo da Batalha</h3>
+                <div class="stat-row">
+                    <span class="stat-label">Bônus Ativo</span>
+                    <span class="stat-value" id="total-bonus">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Sinergias</span>
+                    <span class="stat-value" id="synergy-count">0</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Player Teams Panel -->
+        <section class="team-panel player-side">
+            <div class="panel-header">
+                <h2>Seu Esquadrão</h2>
+            </div>
+            <div id="player-teams-container">
+                <!-- Teams injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Selection Modal -->
+    <div id="selection-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Selecionar Cavaleiro</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="modal-search" placeholder="Buscar cavaleiro..." oninput="filterKnights()">
+                </div>
+            </div>
+            <div class="modal-grid" id="modal-grid">
+                <!-- Knights injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Configuration Modal -->
+    <div id="config-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Configuração de Cavaleiros</h2>
+                <button class="modal-close" onclick="closeConfigModal()">&times;</button>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="config-search" placeholder="Buscar para configurar..." oninput="renderConfigList()">
+                </div>
+            </div>
+            <div class="config-grid" id="config-list-container">
+                <!-- Config items injected by JS -->
+            </div>
+            <div style="padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <button class="save-btn" onclick="saveConfigs()">Salvar Configurações</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script type="module">
+        import { databaseCavaleiros, databaseBosses, calcularBonusFormacao, sugerirContraTime, validateGlobalSelection, knightConfig, loadConfigs, saveConfigs, ROLES_PT, ELEMENTS_PT } from './js/SaintSeiyaFormationEngine.js';
+
+        // State
+        let currentMode = 1;
+        let playerTeams = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
+        let enemyTeams = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
+        
+        // Boss Mode State
+        let bossMode = false;
+        let selectedBoss = null;
+        let bossTeam = [null, null, null, null]; // Boss + 3 habilidades
+
+        let editingContext = null;
+
+        // Global functions for HTML access
+        window.setMode = (mode) => {
+            if (mode === 'boss') {
+                bossMode = true;
+                currentMode = 1;
+                document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelector('.boss-btn').classList.add('active');
+                document.getElementById('enemy-panel-title').textContent = '👑 BOSS';
+            } else {
+                bossMode = false;
+                selectedBoss = null;
+                bossTeam = [null, null, null, null];
+                currentMode = mode;
+                document.querySelectorAll('.mode-btn').forEach((btn, idx) => {
+                    if (idx + 1 === mode) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                });
+                document.getElementById('enemy-panel-title').textContent = 'Ameaça';
+            }
+            renderBattlefield();
+        };
+
+        window.openSelection = (side, teamIndex, slotIndex) => {
+            editingContext = { side, teamIndex, slotIndex };
+            
+            if (bossMode && side === 'enemy') {
+                renderBossSelectionGrid();
+            } else if (bossMode && side === 'player') {
+                renderModalGrid();
+            } else {
+                renderModalGrid();
+            }
+            
+            document.getElementById('selection-modal').classList.add('active');
+        };
+
+        window.closeModal = () => {
+            document.getElementById('selection-modal').classList.remove('active');
+            editingContext = null;
+            document.getElementById('modal-search').value = '';
+        };
+
+        window.selectKnight = (knightId) => {
+            if (!editingContext) return;
+            
+            if (bossMode && editingContext.side === 'enemy') {
+                // Select boss
+                const boss = databaseBosses.find(b => b.id === knightId);
+                if (boss) {
+                    selectedBoss = boss;
+                    bossTeam = [boss, null, null, null];
+                }
+            } else if (bossMode && editingContext.side === 'player') {
+                // Select player knight for boss mode
+                const k = databaseCavaleiros.find(x => x.id === knightId);
+                playerTeams[editingContext.teamIndex][editingContext.slotIndex] = k;
+            } else {
+                // Normal mode
+                const k = databaseCavaleiros.find(x => x.id === knightId);
+                if (editingContext.side === 'player') {
+                    playerTeams[editingContext.teamIndex][editingContext.slotIndex] = k;
+                } else {
+                    enemyTeams[editingContext.teamIndex][editingContext.slotIndex] = k;
+                }
+            }
+
+            closeModal();
+            renderBattlefield();
+            updateQuickStats();
+        };
+
+        window.removeKnight = (side, teamIndex, slotIndex, event) => {
+            event.stopPropagation();
+            if (side === 'player') playerTeams[teamIndex][slotIndex] = null;
+            else enemyTeams[teamIndex][slotIndex] = null;
+            renderBattlefield();
+            updateQuickStats();
+        };
+
+        window.generateCounter = (teamIndex) => {
+            if (bossMode && selectedBoss) {
+                // BOSS MODE: Gerar time para causar dano máximo
+                const bestTeam = sugerirContraTime(null, databaseCavaleiros, selectedBoss);
+                playerTeams[teamIndex] = bestTeam;
+                while (playerTeams[teamIndex].length < 5) playerTeams[teamIndex].push(null);
+                renderBattlefield();
+                updateQuickStats();
+            } else if (bossMode && !selectedBoss) {
+                alert("Selecione um Boss primeiro!");
+            } else {
+                // NORMAL MODE: Contra-time tradicional
+                const enemyTeam = enemyTeams[teamIndex];
+                const activeEnemies = enemyTeam.filter(k => k);
+                if (activeEnemies.length === 0) {
+                    alert("Configure o time inimigo primeiro!");
+                    return;
+                }
+
+                const usedIds = new Set();
+                playerTeams.forEach((t, tidx) => {
+                    if (tidx === teamIndex) return;
+                    t.forEach(k => { if (k) usedIds.add(k.id); });
+                });
+
+                const availablePool = databaseCavaleiros.filter(k => !usedIds.has(k.id));
+
+                if (availablePool.length < 5) {
+                    alert("Não há cavaleiros suficientes disponíveis!");
+                    return;
+                }
+
+                const bestTeam = sugerirContraTime(enemyTeam, availablePool);
+                playerTeams[teamIndex] = bestTeam;
+
+                while (playerTeams[teamIndex].length < 5) playerTeams[teamIndex].push(null);
+
+                renderBattlefield();
+                updateQuickStats();
+            }
+        };
+
+        // Update Quick Stats
+        function updateQuickStats() {
+            let totalBonus = 0;
+            let synergyCount = 0;
+
+            playerTeams.forEach(team => {
+                const bonus = calcularBonusFormacao(team);
+                if (bonus.dmg > 0) {
+                    totalBonus += bonus.dmg;
+                    synergyCount++;
+                }
+            });
+
+            document.getElementById('total-bonus').textContent = `+${totalBonus}%`;
+            document.getElementById('synergy-count').textContent = synergyCount;
+        }
+
+        // Render Battlefield
+        function renderBattlefield() {
+            const pContainer = document.getElementById('player-teams-container');
+            const eContainer = document.getElementById('enemy-teams-container');
+            pContainer.innerHTML = '';
+            eContainer.innerHTML = '';
+
+            if (bossMode) {
+                // Boss Mode: Show boss on left, player team on right
+                eContainer.appendChild(createBossCard());
+                pContainer.appendChild(createTeamCard('player', 0, playerTeams[0]));
+            } else {
+                // Normal Mode
+                for (let i = 0; i < currentMode; i++) {
+                    pContainer.appendChild(createTeamCard('player', i, playerTeams[i]));
+                    eContainer.appendChild(createTeamCard('enemy', i, enemyTeams[i]));
+                }
+            }
+
+            updateQuickStats();
+        }
+
+        // Create Boss Card
+        function createBossCard() {
+            const card = document.createElement('div');
+            card.className = 'boss-card animate-fade-in';
+            
+            if (selectedBoss) {
+                card.innerHTML = `
+                    <div class=\"boss-header\">
+                        <span class=\"boss-title\">👑 ${selectedBoss.nome}</span>
+                    </div>
+                    <div class=\"boss-main\">
+                        <img src=\"${selectedBoss.asset}\" alt=\"${selectedBoss.nome}\" class=\"boss-image\" 
+                            onerror=\"this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%231a1a24%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2212%22>?</text></svg>'\">
+                        <div class=\"element-icon element-${selectedBoss.elemento}\"></div>
+                        <button class=\"remove-btn\" onclick=\"removeBoss(event)\">×</button>
+                    </div>
+                    <div class=\"boss-habilidades\">
+                        <div class=\"habilidades-title\">Habilidades</div>
+                        <div class=\"habilidades-grid\">
+                            ${selectedBoss.habilidades.map((hab, idx) => `
+                                <div class=\"habilidade-slot\" onclick=\"openBossAbilitySelection(${idx})\">
+                                    <span class=\"habilidade-nome\">${hab.nome}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                card.innerHTML = `
+                    <div class=\"boss-empty\" onclick=\"openSelection('enemy', 0, 0)\">
+                        <span class=\"boss-plus\">+</span>
+                        <span>Selecionar Boss</span>
+                    </div>
+                `;
+            }
+
+            return card;
+        }
+
+        // Open Boss Ability Selection
+        window.openBossAbilitySelection = (abilityIndex) => {
+            if (!selectedBoss) return;
+            
+            // Show ability info - in a real implementation, you could select different abilities
+            const hab = selectedBoss.habilidades[abilityIndex];
+            alert(`Habilidade: ${hab.nome}`);
+        };
+
+        // Remove Boss
+        window.removeBoss = (event) => {
+            event.stopPropagation();
+            selectedBoss = null;
+            bossTeam = [null, null, null, null];
+            renderBattlefield();
+        };
+
+        // Reset All Selections
+        window.resetAllSelections = () => {
+            if (confirm('Tem certeza que deseja limpar todas as seleções?')) {
+                playerTeams = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
+                enemyTeams = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
+                selectedBoss = null;
+                bossTeam = [null, null, null, null];
+                renderBattlefield();
+                updateQuickStats();
+            }
+        };
+
+        // Create Team Card
+        function createTeamCard(side, index, teamData) {
+            const card = document.createElement('div');
+            card.className = 'team-card animate-fade-in';
+            card.style.animationDelay = `${index * 0.1}s`;
+
+            const bonus = calcularBonusFormacao(teamData);
+
+            const header = document.createElement('div');
+            header.className = 'team-card-header';
+            header.innerHTML = `
+                <span class="team-number">Time ${index + 1}</span>
+                ${bonus.dmg > 0 ? `
+                    <div class="bonus-badge ${bonus.dmg >= 25 ? 'cosmic' : ''}">
+                        <span>${bonus.nome}</span>
+                        <span>+${bonus.dmg}% / +${bonus.hp}%</span>
+                    </div>
+                ` : ''}
+            `;
+
+            const slotsDiv = document.createElement('div');
+            slotsDiv.className = 'slots-container';
+
+            for (let s = 0; s < 5; s++) {
+                const knight = teamData[s];
+                const slot = document.createElement('div');
+                slot.className = `knight-slot ${!knight ? '' : 'filled'}`;
+                slot.onclick = () => openSelection(side, index, s);
+
+                if (knight) {
+                    slot.innerHTML = `
+                        <img src="${knight.asset}" alt="${knight.nome}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%231a1a24%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2212%22>?</text></svg>'">
+                        <div class="element-icon element-${knight.elemento}"></div>
+                        <button class="remove-btn" onclick="removeKnight('${side}', ${index}, ${s}, event)">×</button>
+                        <div class="knight-info">
+                            <div class="knight-name">${knight.nome}</div>
+                        </div>
+                    `;
+                }
+
+                slotsDiv.appendChild(slot);
+            }
+
+            card.appendChild(header);
+            card.appendChild(slotsDiv);
+
+            if (side === 'player') {
+                const btn = document.createElement('button');
+                btn.className = 'action-btn magic';
+                btn.innerHTML = bossMode ? '⚡ Gerar Time Dano Máximo' : '⚡ Gerar Contra-Time';
+                btn.onclick = () => window.generateCounter(index);
+                card.appendChild(btn);
+            }
+
+            return card;
+        }
+
+        // Render Boss Selection Grid
+        function renderBossSelectionGrid() {
+            const grid = document.getElementById('modal-grid');
+            grid.innerHTML = '';
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'modal-section-title';
+            titleDiv.textContent = 'Selecione o Boss';
+            grid.appendChild(titleDiv);
+
+            databaseBosses.forEach(boss => {
+                const card = document.createElement('div');
+                card.className = 'knight-card';
+                card.onclick = () => {
+                    editingContext.side = 'enemy';
+                    selectKnight(boss.id);
+                };
+                
+                card.innerHTML = `
+                    <div class=\"knight-image\">
+                        <img src=\"${boss.asset}\" alt=\"${boss.nome}\" onerror=\"this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%231a1a24%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2212%22>?</text></svg>'\">
+                    </div>
+                    <div class=\"knight-name\">${boss.nome}</div>
+                    <div class=\"knight-role\">${ROLES_PT[boss.role]}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Modal Grid
+        function renderModalGrid() {
+            const grid = document.getElementById('modal-grid');
+            grid.innerHTML = '';
+
+            const categories = [
+                { key: 'Deus', label: 'Deuses' },
+                { key: 'Divino', label: 'Divinos' },
+                { key: 'Ouro', label: 'Cavaleiros de Ouro' },
+                { key: 'Prata', label: 'Cavaleiros de Prata' },
+                { key: 'Bronze', label: 'Cavaleiros de Bronze' },
+                { key: 'Marina', label: 'Marinas' },
+                { key: 'Espectro', label: 'Espectros' },
+                { key: 'Outros', label: 'Outros Cavaleiros' }
+            ];
+
+            const usedIds = new Set();
+            if (editingContext && editingContext.side === 'player') {
+                playerTeams.forEach((t, tIdx) => {
+                    t.forEach((existingK, sIdx) => {
+                        if (!existingK) return;
+                        if (tIdx === editingContext.teamIndex && sIdx === editingContext.slotIndex) return;
+                        usedIds.add(existingK.id);
+                    });
+                });
+            }
+
+            function getCategory(knight) {
+                const assetPath = knight.asset || '';
+                for (const cat of categories) {
+                    if (assetPath.includes(cat.key + '_') || assetPath.includes('/' + cat.key + '_')) {
+                        return cat.key;
+                    }
+                }
+                return 'Outros';
+            }
+
+            categories.forEach(cat => {
+                let knightsInCat = databaseCavaleiros.filter(k => getCategory(k) === cat.key);
+
+                if (editingContext && editingContext.side === 'player') {
+                    knightsInCat = knightsInCat.filter(k => {
+                        const cfg = knightConfig[k.id];
+                        return !cfg || cfg.adquirido !== false;
+                    });
+                }
+
+                if (knightsInCat.length === 0) return;
+
+                const header = document.createElement('div');
+                header.className = 'category-header';
+                header.innerHTML = `<h4>${cat.label}</h4><span class="category-count">${knightsInCat.length}</span>`;
+                grid.appendChild(header);
+
+                const sectionGrid = document.createElement('div');
+                sectionGrid.className = 'category-grid';
+
+                knightsInCat.forEach(k => {
+                    const card = document.createElement('div');
+                    const disabled = usedIds.has(k.id);
+
+                    card.className = `select-card ${disabled ? 'disabled' : ''} animate-scale-in`;
+                    card.onclick = () => !disabled && selectKnight(k.id);
+                    card.style.animationDelay = `${Math.random() * 0.2}s`;
+
+                    card.innerHTML = `
+                        <img src="${k.asset}" alt="${k.nome}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%231a1a24%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2212%22>?</text></svg>'">
+                        <span>${k.nome}</span>
+                    `;
+                    sectionGrid.appendChild(card);
+                });
+
+                grid.appendChild(sectionGrid);
+            });
+        }
+
+        // Filter Knights in Modal
+        function filterKnights() {
+            const searchTerm = document.getElementById('modal-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.select-card, .category-header');
+            
+            cards.forEach(card => {
+                const name = card.querySelector('span')?.textContent.toLowerCase() || '';
+                const headerText = card.classList.contains('category-header') ? card.querySelector('h4')?.textContent.toLowerCase() || '' : '';
+                
+                if (card.classList.contains('category-header')) {
+                    const nextSibling = card.nextElementSibling;
+                    const hasVisibleCards = nextSibling?.querySelector && Array.from(nextSibling.querySelectorAll('.select-card')).some(c => c.style.display !== 'none');
+                    card.style.display = hasVisibleCards || headerText.includes(searchTerm) ? 'flex' : 'none';
+                } else if (card.classList.contains('select-card')) {
+                    card.style.display = name.includes(searchTerm) ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Config Modal Functions
+        window.openConfigModal = () => {
+            loadConfigs();
+            renderConfigList();
+            document.getElementById('config-modal').classList.add('active');
+        };
+
+        window.closeConfigModal = () => {
+            document.getElementById('config-modal').classList.remove('active');
+        };
+
+        window.saveConfigs = () => {
+            saveConfigs();
+            closeConfigModal();
+            renderBattlefield();
+        };
+
+        window.renderConfigList = () => {
+            const container = document.getElementById('config-list-container');
+            const searchTerm = document.getElementById('config-search').value.toLowerCase();
+
+            container.innerHTML = '';
+
+            const filtered = databaseCavaleiros.filter(k => k.nome.toLowerCase().includes(searchTerm));
+
+            filtered.forEach(k => {
+                const config = knightConfig[k.id] || { disponivel: true, adquirido: true, constelacao: 0, armadura: 0 };
+
+                const item = document.createElement('div');
+                item.className = 'config-card';
+
+                item.innerHTML = `
+                    <div class="config-card-header">
+                        <img src="${k.asset}" alt="${k.nome}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%231a1a24%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2212%22>?</text></svg>'">
+                        <div class="config-info">
+                            <h4>${k.nome}</h4>
+                            <p>${ROLES_PT[k.role] || k.role} / ${ELEMENTS_PT[k.elemento] || k.elemento}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <span class="toggle-label">IA</span>
+                            <label class="toggle-label" style="cursor: pointer;">
+                                <input type="checkbox" ${config.disponivel ? 'checked' : ''} 
+                                       onchange="toggleConfig('${k.id}', 'disponivel', this.checked)"
+                                       style="display: none;">
+                                <div class="toggle-switch ${config.disponivel ? 'active' : ''}"></div>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <span class="toggle-label">Adquirido</span>
+                            <label class="toggle-label" style="cursor: pointer;">
+                                <input type="checkbox" ${config.adquirido ? 'checked' : ''} 
+                                       onchange="toggleConfig('${k.id}', 'adquirido', this.checked)"
+                                       style="display: none;">
+                                <div class="toggle-switch ${config.adquirido ? 'active' : ''}"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="level-selector">
+                        <span class="level-label">Constelação</span>
+                        <div class="level-buttons">
+                            ${[1, 2].map(lvl => `
+                                <button class="level-btn ${config.constelacao >= lvl ? 'active' : ''}" onclick="setConfigLevel('${k.id}', 'constelacao', ${lvl})">${lvl}</button>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="level-selector">
+                        <span class="level-label">Armadura</span>
+                        <div class="level-buttons">
+                            ${[1, 2, 3, 4].map(lvl => `
+                                <button class="level-btn ${config.armadura >= lvl ? 'active' : ''}" onclick="setConfigLevel('${k.id}', 'armadura', ${lvl})">${lvl}</button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        };
+
+        window.toggleConfig = (id, field, value) => {
+            if (!knightConfig[id]) knightConfig[id] = { disponivel: true, adquirido: true, constelacao: 0, armadura: 0 };
+            knightConfig[id][field] = value;
+            renderConfigList();
+        };
+
+        window.setConfigLevel = (id, field, level) => {
+            if (!knightConfig[id]) knightConfig[id] = { disponivel: true, adquirido: true, constelacao: 0, armadura: 0 };
+            const current = knightConfig[id][field];
+            const newValue = (current === level) ? 0 : level;
+            knightConfig[id][field] = newValue;
+            renderConfigList();
+        };
+
+        // Initialize
+        loadConfigs();
+        renderBattlefield();
+    </script>
+</body>
+
+</html>
