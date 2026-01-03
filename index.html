@@ -116,23 +116,80 @@
     <div id="config-modal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Configuração de Cavaleiros</h2>
+                <h2>Configurações</h2>
                 <button class="modal-close" onclick="closeConfigModal()">&times;</button>
             </div>
-            <div class="search-container">
-                <div class="search-box">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="M21 21l-4.35-4.35"/>
-                    </svg>
-                    <input type="text" id="config-search" placeholder="Buscar para configurar..." oninput="renderConfigList()">
+
+            <!-- Tab Navigation -->
+            <div style="display: flex; gap: 10px; padding: 0 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <button class="config-tab active" onclick="switchConfigTab('cavaleiros')">Cavaleiros</button>
+                <button class="config-tab" onclick="switchConfigTab('ai')">🤖 IA</button>
+            </div>
+
+            <!-- Tab: Cavaleiros -->
+            <div id="config-tab-cavaleiros" class="config-tab-content active">
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                        <input type="text" id="config-search" placeholder="Buscar para configurar..." oninput="renderConfigList()">
+                    </div>
+                </div>
+                <div class="config-grid" id="config-list-container">
+                    <!-- Config items injected by JS -->
                 </div>
             </div>
-            <div class="config-grid" id="config-list-container">
-                <!-- Config items injected by JS -->
+
+            <!-- Tab: AI -->
+            <div id="config-tab-ai" class="config-tab-content" style="display: none;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 15px; color: #8b5cf6;">⚡ Geração de Contra-Time com IA</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.8; font-size: 14px;">
+                        Use IA (Claude AI) para analisar o time inimigo e gerar contra-times ainda mais inteligentes!
+                    </p>
+
+                    <div style="margin-bottom: 20px;">
+                        <label class="toggle-label" style="display: flex; align-items: center; justify-content: space-between; padding: 15px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; cursor: pointer;">
+                            <span style="font-weight: bold;">Ativar IA</span>
+                            <input type="checkbox" id="ai-enabled" onchange="toggleAI(this.checked)" style="display: none;">
+                            <div class="toggle-switch" id="ai-toggle"></div>
+                        </label>
+                    </div>
+
+                    <div id="ai-config-details" style="display: none;">
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">API Key (Claude AI)</label>
+                            <input type="password" id="ai-api-key" placeholder="sk-ant-..."
+                                   style="width: 100%; padding: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: white;">
+                            <small style="opacity: 0.7;">Obtenha sua API key em: <a href="https://console.anthropic.com/" target="_blank" style="color: #8b5cf6;">console.anthropic.com</a></small>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Modelo</label>
+                            <select id="ai-model" style="width: 100%; padding: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: white;">
+                                <option value="claude-3-5-sonnet-20241022">Claude 3.5 Sonnet (Recomendado)</option>
+                                <option value="claude-3-opus-20240229">Claude 3 Opus (Mais Inteligente)</option>
+                                <option value="claude-3-haiku-20240307">Claude 3 Haiku (Mais Rápido)</option>
+                            </select>
+                        </div>
+
+                        <div style="padding: 15px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6; border-radius: 4px; margin-top: 20px;">
+                            <strong>💡 Como funciona:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px; font-size: 14px; opacity: 0.9;">
+                                <li>A IA analisa o time inimigo completo (skills, elementos, roles)</li>
+                                <li>Considera todos os cavaleiros disponíveis e seus atributos</li>
+                                <li>Sugere os 5 melhores cavaleiros com explicação detalhada</li>
+                                <li>Leva em conta sinergias e contadores específicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div style="padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                <button class="save-btn" onclick="saveConfigs()">Salvar Configurações</button>
+                <button class="save-btn" onclick="saveAllConfigs()">Salvar Configurações</button>
             </div>
         </div>
     </div>
@@ -140,6 +197,7 @@
     <!-- Application Logic -->
     <script type="module">
         import { databaseCavaleiros, databaseBosses, calcularBonusFormacao, sugerirContraTime, validateGlobalSelection, knightConfig, loadConfigs, saveConfigs, loadExtendedKnightData, ROLES_PT, ELEMENTS_PT } from './js/SaintSeiyaFormationEngine.js';
+        import { loadAIConfig, saveAIConfig, isAIEnabled, generateAICounterTeam, AI_CONFIG } from './js/AICounterTeamEngine.js';
 
         // State
         let currentMode = 1;
@@ -271,6 +329,69 @@
 
                 renderBattlefield();
                 updateQuickStats();
+            }
+        };
+
+        // Generate AI-powered counter team
+        window.generateAICounter = async (teamIndex) => {
+            if (!isAIEnabled()) {
+                alert('IA não configurada! Configure a API Key nas configurações.');
+                return;
+            }
+
+            const enemyTeam = bossMode && selectedBoss ? null : enemyTeams[teamIndex];
+            const boss = bossMode ? selectedBoss : null;
+
+            if (!bossMode) {
+                const activeEnemies = enemyTeam.filter(k => k);
+                if (activeEnemies.length === 0) {
+                    alert('Selecione pelo menos um inimigo primeiro!');
+                    return;
+                }
+            } else if (!selectedBoss) {
+                alert("Selecione um Boss primeiro!");
+                return;
+            }
+
+            // Collect already used knights
+            const usedKnights = new Set();
+            playerTeams.forEach((team, idx) => {
+                if (idx !== teamIndex) {
+                    team.forEach(knight => {
+                        if (knight) usedKnights.add(knight.id);
+                    });
+                }
+            });
+
+            // Filter available pool
+            const availablePool = databaseCavaleiros.filter(k => !usedKnights.has(k.id));
+
+            // Show loading
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'ai-loading-overlay';
+            loadingDiv.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 10000;';
+            loadingDiv.innerHTML = '<div style="text-align: center;"><div class="ai-loading" style="font-size: 48px;">🤖</div><p style="color: white; margin-top: 20px;">IA analisando composição do time...</p></div>';
+            document.body.appendChild(loadingDiv);
+
+            try {
+                const result = await generateAICounterTeam(enemyTeam, availablePool, boss);
+
+                // Set the suggested team
+                playerTeams[teamIndex] = result.team;
+                while (playerTeams[teamIndex].length < 5) playerTeams[teamIndex].push(null);
+
+                renderBattlefield();
+                updateQuickStats();
+
+                // Show AI explanation
+                setTimeout(() => {
+                    document.body.removeChild(loadingDiv);
+                    alert(`🤖 IA Selecionou:\n\n${result.team.map(k => k.nome).join('\n')}\n\n📊 Análise:\n${result.explanation.substring(0, 500)}...`);
+                }, 500);
+            } catch (error) {
+                document.body.removeChild(loadingDiv);
+                console.error('Erro ao gerar contra-time com IA:', error);
+                alert(`Erro ao gerar contra-time com IA:\n\n${error.message}\n\nVerifique se a API Key está correta nas configurações.`);
             }
         };
 
@@ -428,11 +549,26 @@
             card.appendChild(slotsDiv);
 
             if (side === 'player') {
+                const buttonContainer = document.createElement('div');
+                buttonContainer.style.cssText = 'display: flex; gap: 10px; flex-wrap: wrap;';
+
+                // Botão tradicional
                 const btn = document.createElement('button');
                 btn.className = 'action-btn magic';
                 btn.innerHTML = bossMode ? '⚡ Gerar Time Dano Máximo' : '⚡ Gerar Contra-Time';
                 btn.onclick = () => window.generateCounter(index);
-                card.appendChild(btn);
+                buttonContainer.appendChild(btn);
+
+                // Botão com IA (se ativado)
+                if (isAIEnabled()) {
+                    const aiBtn = document.createElement('button');
+                    aiBtn.className = 'action-btn ai-generate-btn';
+                    aiBtn.innerHTML = '🤖 Gerar com IA';
+                    aiBtn.onclick = () => window.generateAICounter(index);
+                    buttonContainer.appendChild(aiBtn);
+                }
+
+                card.appendChild(buttonContainer);
             }
 
             return card;
@@ -566,6 +702,7 @@
         // Config Modal Functions
         window.openConfigModal = () => {
             loadConfigs();
+            loadAIConfigUI();
             renderConfigList();
             document.getElementById('config-modal').classList.add('active');
         };
@@ -574,10 +711,73 @@
             document.getElementById('config-modal').classList.remove('active');
         };
 
-        window.saveConfigs = () => {
+        window.saveAllConfigs = () => {
+            // Save knight configs
             saveConfigs();
+
+            // Save AI configs
+            const aiEnabled = document.getElementById('ai-enabled').checked;
+            const apiKey = document.getElementById('ai-api-key').value;
+            const model = document.getElementById('ai-model').value;
+
+            saveAIConfig({
+                enabled: aiEnabled,
+                apiKey: apiKey,
+                model: model
+            });
+
             closeConfigModal();
             renderBattlefield();
+
+            if (aiEnabled && !apiKey) {
+                alert('⚠️ IA ativada mas API Key não configurada! Configure a API Key para usar a IA.');
+            }
+        };
+
+        // Config Tab Management
+        window.switchConfigTab = (tabName) => {
+            // Hide all tabs
+            document.querySelectorAll('.config-tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            document.querySelectorAll('.config-tab').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(`config-tab-${tabName}`).style.display = 'block';
+            event.target.classList.add('active');
+        };
+
+        // AI Configuration
+        function loadAIConfigUI() {
+            loadAIConfig();
+
+            const enabledCheckbox = document.getElementById('ai-enabled');
+            const toggle = document.getElementById('ai-toggle');
+            const details = document.getElementById('ai-config-details');
+            const apiKeyInput = document.getElementById('ai-api-key');
+            const modelSelect = document.getElementById('ai-model');
+
+            enabledCheckbox.checked = AI_CONFIG.enabled;
+            toggle.classList.toggle('active', AI_CONFIG.enabled);
+            details.style.display = AI_CONFIG.enabled ? 'block' : 'none';
+
+            if (AI_CONFIG.apiKey) {
+                apiKeyInput.value = AI_CONFIG.apiKey;
+            }
+
+            if (AI_CONFIG.model) {
+                modelSelect.value = AI_CONFIG.model;
+            }
+        }
+
+        window.toggleAI = (enabled) => {
+            const toggle = document.getElementById('ai-toggle');
+            const details = document.getElementById('ai-config-details');
+
+            toggle.classList.toggle('active', enabled);
+            details.style.display = enabled ? 'block' : 'none';
         };
 
         window.renderConfigList = () => {

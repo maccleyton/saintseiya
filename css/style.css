@@ -1481,3 +1481,70 @@ h3 {
   gap: 12px;
   padding: 10px 0;
 }
+
+/* Config Tabs */
+.config-tab {
+    padding: 12px 24px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.config-tab:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.config-tab.active {
+    color: #8b5cf6;
+    border-bottom-color: #8b5cf6;
+}
+
+.config-tab-content {
+    display: block;
+}
+
+.config-tab-content.active {
+    display: block !important;
+}
+
+/* AI Generate Button */
+.ai-generate-btn {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.ai-generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.ai-generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* AI Loading */
+.ai-loading {
+    display: inline-block;
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
