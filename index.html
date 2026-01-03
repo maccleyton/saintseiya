@@ -139,7 +139,7 @@
 
     <!-- Application Logic -->
     <script type="module">
-        import { databaseCavaleiros, databaseBosses, calcularBonusFormacao, sugerirContraTime, validateGlobalSelection, knightConfig, loadConfigs, saveConfigs, ROLES_PT, ELEMENTS_PT } from './js/SaintSeiyaFormationEngine.js';
+        import { databaseCavaleiros, databaseBosses, calcularBonusFormacao, sugerirContraTime, validateGlobalSelection, knightConfig, loadConfigs, saveConfigs, loadExtendedKnightData, ROLES_PT, ELEMENTS_PT } from './js/SaintSeiyaFormationEngine.js';
 
         // State
         let currentMode = 1;
@@ -661,8 +661,26 @@
         };
 
         // Initialize
-        loadConfigs();
-        renderBattlefield();
+        async function initializeApp() {
+            console.log('🔧 Inicializando Saint Seiya Formation Engine...');
+
+            // Carregar dados estendidos dos cavaleiros
+            const extendedDataLoaded = await loadExtendedKnightData();
+            if (extendedDataLoaded) {
+                console.log('✅ Sistema de análise avançada ativado!');
+                console.log('   → Skills, Armadura e Constelação sendo consideradas no contra-time');
+            } else {
+                console.log('⚠️  Usando análise básica (sem dados estendidos)');
+            }
+
+            // Carregar configurações e renderizar
+            loadConfigs();
+            renderBattlefield();
+
+            console.log('✅ Aplicação pronta!');
+        }
+
+        initializeApp();
     </script>
 </body>
 

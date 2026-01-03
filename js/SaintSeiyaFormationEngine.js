@@ -1,6 +1,41 @@
 // Saint Seiya Formation Engine - Constants and Database
 // Updated with corrected knight names and classifications
 
+// Extended knight data loaded from parsed markdown files
+let knightsFullData = {};
+
+// Load extended data asynchronously
+export async function loadExtendedKnightData() {
+    try {
+        const response = await fetch('./js/knightsFullData.json');
+        if (response.ok) {
+            knightsFullData = await response.json();
+            console.log('✓ Dados completos dos cavaleiros carregados:', Object.keys(knightsFullData).length, 'cavaleiros');
+            return true;
+        }
+    } catch (error) {
+        console.warn('Não foi possível carregar dados estendidos:', error);
+    }
+    return false;
+}
+
+// Helper to get extended knight data by name
+export function getKnightExtendedData(knightName) {
+    // Try exact match first
+    if (knightsFullData[knightName]) {
+        return knightsFullData[knightName];
+    }
+
+    // Try to find by partial match
+    for (const [key, data] of Object.entries(knightsFullData)) {
+        if (knightName.includes(key) || key.includes(knightName)) {
+            return data;
+        }
+    }
+
+    return null;
+}
+
 export const ELEMENTS = {
     WATER: 'Water',
     FIRE: 'Fire',
@@ -335,6 +370,110 @@ export function validateGlobalSelection(playerTeams) {
 }
 
 
+// Helper: Analyze knight effectiveness based on extended data
+function analyzeKnightEffectiveness(knight, enemyTeam, boss = null) {
+    let score = 0;
+
+    // Get extended data
+    const extendedData = getKnightExtendedData(knight.id) || getKnightExtendedData(knight.nome);
+
+    if (!extendedData) {
+        return score; // Return base score if no extended data
+    }
+
+    // Analyze skills for counters
+    const skills = extendedData.skills || [];
+    const analise = (extendedData.analise || '').toLowerCase();
+    const armadura = extendedData.armadura || {};
+    const constelacao = extendedData.constelacao || {};
+
+    // Check for specific counter abilities
+    const counterKeywords = {
+        'controle': 10,      // Anti-control abilities
+        'debuff': 8,         // Debuff abilities
+        'vulnerabilidade': 12, // Vulnerability effects
+        'penetração': 10,    // Defense penetration
+        'ignora defesa': 12, // Defense ignore
+        'dano real': 15,     // True damage
+        'escudo': 7,         // Shield abilities
+        'cura': 6,           // Healing
+        'vampirismo': 8,     // Lifesteal
+        'imunidade': 10,     // Immunity
+        'purificação': 7,    // Cleanse
+        'crítico': 8,        // Critical damage
+        'explosão': 10,      // Burst damage
+        'área': 6,           // AoE damage
+        'execução': 12       // Execute abilities
+    };
+
+    // Score based on skill descriptions and analysis
+    for (const [keyword, points] of Object.entries(counterKeywords)) {
+        if (analise.includes(keyword)) {
+            score += points;
+        }
+
+        // Check in armadura and constelação
+        for (const value of Object.values(armadura)) {
+            if (typeof value === 'string' && value.toLowerCase().includes(keyword)) {
+                score += points * 1.5; // Armadura bonuses are more valuable
+            }
+        }
+
+        for (const value of Object.values(constelacao)) {
+            if (typeof value === 'string' && value.toLowerCase().includes(keyword)) {
+                score += points * 1.3; // Constelação bonuses are valuable
+            }
+        }
+    }
+
+    // Analyze enemy composition and suggest specific counters
+    if (enemyTeam && enemyTeam.length > 0) {
+        const activeEnemies = enemyTeam.filter(k => k);
+
+        // Count enemy roles
+        const enemyRoles = {};
+        activeEnemies.forEach(e => {
+            enemyRoles[e.role] = (enemyRoles[e.role] || 0) + 1;
+        });
+
+        // Prioritize counter roles
+        if (enemyRoles[ROLES.TANK] >= 2) {
+            // Against tanks, prioritize penetration and true damage
+            if (analise.includes('tanque') || analise.includes('penetração') || analise.includes('ignora defesa')) {
+                score += 15;
+            }
+        }
+
+        if (enemyRoles[ROLES.MAGE] >= 2) {
+            // Against mages, prioritize anti-magic and interrupts
+            if (analise.includes('silêncio') || analise.includes('controle') || knight.role === ROLES.ASSASSIN) {
+                score += 12;
+            }
+        }
+
+        if (enemyRoles[ROLES.ASSASSIN] >= 2) {
+            // Against assassins, prioritize survivability and counter-attack
+            if (analise.includes('contra-ataque') || analise.includes('escudo') || knight.role === ROLES.TANK) {
+                score += 10;
+            }
+        }
+    }
+
+    // Boss-specific scoring
+    if (boss) {
+        if (analise.includes('boss') || analise.includes('chefe') || analise.includes('raid')) {
+            score += 20;
+        }
+
+        // Prioritize sustained damage dealers against bosses
+        if (analise.includes('sustentado') || analise.includes('dano contínuo')) {
+            score += 15;
+        }
+    }
+
+    return score;
+}
+
 // 5. Logic: Sugerir Contra-Time
 export function sugerirContraTime(enemyTeam, availableKnights, boss = null) {
     // BOSS MODE: Otimizar para causar máximo dano ao boss
@@ -433,6 +572,10 @@ export function sugerirContraTime(enemyTeam, availableKnights, boss = null) {
                 const mult = calcularMultiplicadorElemental(knight, enemy);
                 if (mult > 1) score += 5;
             });
+
+            // NEW: Add effectiveness score based on extended data
+            const effectivenessScore = analyzeKnightEffectiveness(knight, activeEnemies);
+            score += effectivenessScore;
         });
 
         if (score > bestScore) {
@@ -570,6 +713,10 @@ function sugerirTimeDanoMaximo(boss, availableKnights) {
         // Bônus por personagens de alto dano (ROLE É CHAVE)
         team.forEach(knight => {
             score += (roleDamageScore[knight.role] || 0);
+
+            // NEW: Add boss-specific effectiveness score
+            const bossEffectivenessScore = analyzeKnightEffectiveness(knight, null, boss);
+            score += bossEffectivenessScore;
         });
 
         if (score > bestScore) {
