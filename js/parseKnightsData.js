@@ -30,8 +30,8 @@ function parseMarkdownFile(filePath, folderName) {
             rawContent: content
         };
 
-        // Extrair elemento
-        const elementoMatch = content.match(/Elemento:\s*[🔥💧💨🌍✨💜⚡🌊🍃⛰️☀️🌙]?\s*(Fogo|Água|Vento|Terra|Luz|Trevas|Escuridão|Fire|Water|Wind|Earth|Light|Dark)/i);
+        // Extrair elemento - busca mais flexível
+        const elementoMatch = content.match(/Elemento:\s*.*?\s*(Fogo|Água|Vento|Terra|Luz|Trevas|Escuridão|Fire|Water|Wind|Earth|Light|Dark)/i);
         if (elementoMatch) {
             const elem = elementoMatch[1].toLowerCase();
             const elementMap = {
@@ -43,6 +43,26 @@ function parseMarkdownFile(filePath, folderName) {
                 'trevas': 'Dark', 'escuridão': 'Dark', 'dark': 'Dark'
             };
             data.elemento = elementMap[elem] || 'Light';
+        } else {
+            // Fallback: buscar emojis específicos na linha do elemento
+            const emojiMap = {
+                '🔥': 'Fire', '🌋': 'Fire',
+                '💧': 'Water', '🌊': 'Water', '💦': 'Water',
+                '💨': 'Wind', '🌪️': 'Wind', '🍃': 'Wind',
+                '🌍': 'Earth', '⛰️': 'Earth', '🪨': 'Earth',
+                '✨': 'Light', '☀️': 'Light', '💫': 'Light', '⭐': 'Light',
+                '💜': 'Dark', '🌙': 'Dark', '🌑': 'Dark'
+            };
+
+            const elementoLine = content.match(/Elemento:.*$/m);
+            if (elementoLine) {
+                for (const [emoji, element] of Object.entries(emojiMap)) {
+                    if (elementoLine[0].includes(emoji)) {
+                        data.elemento = element;
+                        break;
+                    }
+                }
+            }
         }
 
         // Extrair função/role
@@ -134,9 +154,15 @@ function parseMarkdownFile(filePath, folderName) {
         }
 
         // Extrair análise tática
-        const analiseSection = content.match(/###?\s*📊?\s*Análise\s+Tática([\s\S]*?)(?=---|\*\*[^\*]+Adicionado|$)/i);
+        const analiseSection = content.match(/###?\s*📊?\s*Análise\s+Tática[^\n]*([\s\S]*?)(?=---|\*\*[^\*]+[Aa]dicionad|$)/i);
         if (analiseSection) {
-            data.analise = analiseSection[1].trim().substring(0, 500); // Limitar tamanho
+            data.analise = analiseSection[1].trim().substring(0, 1000); // Aumentar limite
+        } else {
+            // Fallback: pegar qualquer seção de análise
+            const analiseAlt = content.match(/Análise[^#]*([\s\S]{100,800})/i);
+            if (analiseAlt) {
+                data.analise = analiseAlt[1].trim().substring(0, 1000);
+            }
         }
 
         return data;
@@ -167,9 +193,22 @@ function parseAllKnights() {
                     const knightData = parseMarkdownFile(filePath, folder);
 
                     if (knightData) {
-                        const key = path.basename(file, '.md');
-                        allData[key] = knightData;
-                        console.log(`  ✓ ${key} (${knightData.skills.length} skills)`);
+                        const baseName = path.basename(file, '.md');
+                        const category = FOLDER_TO_CATEGORY[folder] || 'Outros';
+
+                        // Create unique key: Category_Name
+                        const uniqueKey = `${category}_${baseName}`;
+
+                        // Also store with just the name for backwards compatibility
+                        // But prioritize the unique key
+                        allData[uniqueKey] = knightData;
+
+                        // Only add base name if it doesn't exist yet
+                        if (!allData[baseName]) {
+                            allData[baseName] = knightData;
+                        }
+
+                        console.log(`  ✓ ${uniqueKey} (${knightData.skills.length} skills)`);
                     }
                 }
             });

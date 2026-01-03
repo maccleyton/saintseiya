@@ -19,16 +19,93 @@ export async function loadExtendedKnightData() {
     return false;
 }
 
-// Helper to get extended knight data by name
-export function getKnightExtendedData(knightName) {
-    // Try exact match first
-    if (knightsFullData[knightName]) {
-        return knightsFullData[knightName];
+// Helper to get extended knight data by ID/name
+export function getKnightExtendedData(knightId, knightName = null) {
+    if (!knightId && !knightName) return null;
+
+    // Build possible keys to search
+    const searchKeys = [];
+
+    // Add ID-based keys (these are most reliable)
+    if (knightId) {
+        searchKeys.push(knightId); // Exact ID like "Aiolia_God"
+
+        // Try to extract category and name from ID
+        // Format: CategoryPrefix_Name or just Name
+        const idParts = knightId.split('_');
+        if (idParts.length > 1) {
+            const possibleName = idParts.slice(1).join('_');
+            searchKeys.push(possibleName);
+        }
+
+        // Map common ID prefixes to categories
+        const categoryMap = {
+            '_God': 'Divino',
+            '_Gold': 'Ouro',
+            '_V1': 'Bronze',
+            '_Prata': 'Prata',
+            '_Marina': 'Marina',
+            '_Espectro': 'Espectro'
+        };
+
+        for (const [suffix, category] of Object.entries(categoryMap)) {
+            if (knightId.endsWith(suffix)) {
+                const baseName = knightId.replace(suffix, '');
+                searchKeys.push(`${category}_${baseName}`);
+            }
+        }
     }
 
-    // Try to find by partial match
+    // Add name-based keys
+    if (knightName) {
+        searchKeys.push(knightName);
+
+        // Clean the name
+        const cleanName = knightName
+            .replace(/\s*\([^)]+\)/g, '')
+            .replace(/\s+(de|da|do)\s+.+$/i, '')
+            .trim();
+
+        if (cleanName !== knightName) {
+            searchKeys.push(cleanName);
+        }
+
+        // Try category_name combinations
+        const namePatterns = [
+            { pattern: /\(Divino\)/i, category: 'Divino' },
+            { pattern: /\(Ouro\)/i, category: 'Ouro' },
+            { pattern: /\(Bronze\)/i, category: 'Bronze' },
+            { pattern: /\(Prata\)/i, category: 'Prata' },
+            { pattern: /\(Marina\)/i, category: 'Marina' },
+            { pattern: /\(Espectro\)/i, category: 'Espectro' },
+            { pattern: /\(LC\)/i, category: 'Ouro' },
+            { pattern: /\(ND\)/i, category: 'Ouro' }
+        ];
+
+        for (const { pattern, category } of namePatterns) {
+            if (pattern.test(knightName)) {
+                searchKeys.push(`${category}_${cleanName}`);
+            }
+        }
+    }
+
+    // Try all search keys
+    for (const key of searchKeys) {
+        if (knightsFullData[key]) {
+            return knightsFullData[key];
+        }
+    }
+
+    // Fuzzy search fallback
+    const searchTerm = (knightName || knightId).toLowerCase()
+        .replace(/\s*\([^)]+\)/g, '')
+        .trim();
+
     for (const [key, data] of Object.entries(knightsFullData)) {
-        if (knightName.includes(key) || key.includes(knightName)) {
+        const keyLower = key.toLowerCase();
+        const keyClean = key.replace(/\s*\([^)]+\)/g, '').trim().toLowerCase();
+
+        if (keyClean.includes(searchTerm) || searchTerm.includes(keyClean)) {
             return data;
         }
     }
@@ -375,10 +452,18 @@ function analyzeKnightEffectiveness(knight, enemyTeam, boss = null) {
     let score = 0;
 
     // Get extended data
-    const extendedData = getKnightExtendedData(knight.id) || getKnightExtendedData(knight.nome);
+    const extendedData = getKnightExtendedData(knight.id, knight.nome);
 
     if (!extendedData) {
+        // DEBUG: uncomment to see which knights are not found
+        // console.log(`⚠️ Dados estendidos não encontrados para: ${knight.nome} (ID: ${knight.id})`);
         return score; // Return base score if no extended data
+    }
+
+    // DEBUG: log when extended data is used
+    if (score === 0) {
+        // Only log once per knight
+        // console.log(`✓ Analisando ${knight.nome} com dados estendidos`);
     }
 
     // Analyze skills for counters
