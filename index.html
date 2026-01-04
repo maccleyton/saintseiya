@@ -878,7 +878,19 @@
             renderBattlefield();
 
             console.log('✅ Aplicação pronta!');
+            console.log('\n💡 Dica: Digite "enableDebug()" no console para ver análise detalhada dos contra-times!');
         }
+
+        // Debug mode toggle
+        window.DEBUG_SCORING = false;
+        window.enableDebug = () => {
+            window.DEBUG_SCORING = true;
+            console.log('🔍 DEBUG MODE ATIVADO! Você verá análise detalhada na próxima geração de contra-time.');
+        };
+        window.disableDebug = () => {
+            window.DEBUG_SCORING = false;
+            console.log('🔇 DEBUG MODE DESATIVADO.');
+        };
 
         initializeApp();
     </script>

@@ -455,15 +455,16 @@ function analyzeKnightEffectiveness(knight, enemyTeam, boss = null) {
     const extendedData = getKnightExtendedData(knight.id, knight.nome);
 
     if (!extendedData) {
-        // DEBUG: uncomment to see which knights are not found
-        // console.log(`⚠️ Dados estendidos não encontrados para: ${knight.nome} (ID: ${knight.id})`);
+        // DEBUG MODE: Enable to see which knights are not found
+        if (window.DEBUG_SCORING) {
+            console.log(`⚠️ Dados estendidos não encontrados para: ${knight.nome} (ID: ${knight.id})`);
+        }
         return score; // Return base score if no extended data
     }
 
-    // DEBUG: log when extended data is used
-    if (score === 0) {
-        // Only log once per knight
-        // console.log(`✓ Analisando ${knight.nome} com dados estendidos`);
+    // DEBUG MODE: Log knight analysis
+    if (window.DEBUG_SCORING) {
+        console.log(`\n🔍 Analisando ${knight.nome}:`);
     }
 
     // Analyze skills for counters
@@ -474,41 +475,51 @@ function analyzeKnightEffectiveness(knight, enemyTeam, boss = null) {
 
     // Check for specific counter abilities
     const counterKeywords = {
-        'controle': 10,      // Anti-control abilities
-        'debuff': 8,         // Debuff abilities
-        'vulnerabilidade': 12, // Vulnerability effects
-        'penetração': 10,    // Defense penetration
-        'ignora defesa': 12, // Defense ignore
-        'dano real': 15,     // True damage
-        'escudo': 7,         // Shield abilities
-        'cura': 6,           // Healing
-        'vampirismo': 8,     // Lifesteal
-        'imunidade': 10,     // Immunity
-        'purificação': 7,    // Cleanse
-        'crítico': 8,        // Critical damage
-        'explosão': 10,      // Burst damage
-        'área': 6,           // AoE damage
-        'execução': 12       // Execute abilities
+        'controle': 50,       // Anti-control abilities (aumentado de 10)
+        'debuff': 40,         // Debuff abilities (aumentado de 8)
+        'vulnerabilidade': 60, // Vulnerability effects (aumentado de 12)
+        'penetração': 50,     // Defense penetration (aumentado de 10)
+        'ignora defesa': 80,  // Defense ignore (aumentado de 12)
+        'dano real': 90,      // True damage (aumentado de 15)
+        'escudo': 35,         // Shield abilities (aumentado de 7)
+        'cura': 30,           // Healing (aumentado de 6)
+        'vampirismo': 45,     // Lifesteal (aumentado de 8)
+        'imunidade': 50,      // Immunity (aumentado de 10)
+        'purificação': 35,    // Cleanse (aumentado de 7)
+        'crítico': 40,        // Critical damage (aumentado de 8)
+        'explosão': 50,       // Burst damage (aumentado de 10)
+        'área': 30,           // AoE damage (aumentado de 6)
+        'execução': 60        // Execute abilities (aumentado de 12)
     };
 
     // Score based on skill descriptions and analysis
+    const foundKeywords = [];
     for (const [keyword, points] of Object.entries(counterKeywords)) {
         if (analise.includes(keyword)) {
             score += points;
+            foundKeywords.push(`${keyword} (+${points})`);
         }
 
         // Check in armadura and constelação
         for (const value of Object.values(armadura)) {
             if (typeof value === 'string' && value.toLowerCase().includes(keyword)) {
-                score += points * 1.5; // Armadura bonuses are more valuable
+                const bonus = Math.round(points * 1.5);
+                score += bonus;
+                foundKeywords.push(`${keyword}/armadura (+${bonus})`);
             }
         }
 
         for (const value of Object.values(constelacao)) {
             if (typeof value === 'string' && value.toLowerCase().includes(keyword)) {
-                score += points * 1.3; // Constelação bonuses are valuable
+                const bonus = Math.round(points * 1.3);
+                score += bonus;
+                foundKeywords.push(`${keyword}/constelação (+${bonus})`);
             }
         }
+    }
+
+    if (window.DEBUG_SCORING && foundKeywords.length > 0) {
+        console.log(`  Keywords: ${foundKeywords.join(', ')}`);
     }
 
     // Analyze enemy composition and suggest specific counters
@@ -521,39 +532,69 @@ function analyzeKnightEffectiveness(knight, enemyTeam, boss = null) {
             enemyRoles[e.role] = (enemyRoles[e.role] || 0) + 1;
         });
 
-        // Prioritize counter roles
+        // Prioritize counter roles (AUMENTADO DRASTICAMENTE)
         if (enemyRoles[ROLES.TANK] >= 2) {
             // Against tanks, prioritize penetration and true damage
-            if (analise.includes('tanque') || analise.includes('penetração') || analise.includes('ignora defesa')) {
-                score += 15;
+            if (analise.includes('tanque') || analise.includes('penetração') ||
+                analise.includes('ignora defesa') || analise.includes('dano real') ||
+                analise.includes('% da vida') || analise.includes('% do hp')) {
+                score += 100; // Aumentado de 15 para 100!
+                if (window.DEBUG_SCORING) console.log(`  ⚔️  Anti-Tank bonus: +100`);
             }
         }
 
         if (enemyRoles[ROLES.MAGE] >= 2) {
             // Against mages, prioritize anti-magic and interrupts
-            if (analise.includes('silêncio') || analise.includes('controle') || knight.role === ROLES.ASSASSIN) {
-                score += 12;
+            if (analise.includes('silêncio') || analise.includes('controle') ||
+                analise.includes('interrupt') || knight.role === ROLES.ASSASSIN) {
+                score += 80; // Aumentado de 12 para 80!
+                if (window.DEBUG_SCORING) console.log(`  ⚡ Anti-Mage bonus: +80`);
             }
         }
 
         if (enemyRoles[ROLES.ASSASSIN] >= 2) {
             // Against assassins, prioritize survivability and counter-attack
-            if (analise.includes('contra-ataque') || analise.includes('escudo') || knight.role === ROLES.TANK) {
-                score += 10;
+            if (analise.includes('contra-ataque') || analise.includes('escudo') ||
+                analise.includes('reflexo') || knight.role === ROLES.TANK) {
+                score += 70; // Aumentado de 10 para 70!
+                if (window.DEBUG_SCORING) console.log(`  🛡️  Anti-Assassin bonus: +70`);
+            }
+        }
+
+        // NEW: Bonus for specific counters
+        if (enemyRoles[ROLES.SUPPORT] >= 2) {
+            // Against supports, prioritize burst damage and execution
+            if (analise.includes('execução') || analise.includes('explosão') || analise.includes('burst')) {
+                score += 60;
+                if (window.DEBUG_SCORING) console.log(`  💥 Anti-Support bonus: +60`);
             }
         }
     }
 
-    // Boss-specific scoring
+    // Boss-specific scoring (AUMENTADO)
     if (boss) {
         if (analise.includes('boss') || analise.includes('chefe') || analise.includes('raid')) {
-            score += 20;
+            score += 120; // Aumentado de 20 para 120
+            if (window.DEBUG_SCORING) console.log(`  👑 Boss Specialist: +120`);
         }
 
         // Prioritize sustained damage dealers against bosses
-        if (analise.includes('sustentado') || analise.includes('dano contínuo')) {
-            score += 15;
+        if (analise.includes('sustentado') || analise.includes('dano contínuo') ||
+            analise.includes('loop') || analise.includes('spam')) {
+            score += 100; // Aumentado de 15 para 100
+            if (window.DEBUG_SCORING) console.log(`  🔄 Sustained DPS: +100`);
         }
+
+        // Bonus for boss killers (damage based on enemy HP)
+        if (analise.includes('% da vida') || analise.includes('% do hp') ||
+            analise.includes('vida máxima') || analise.includes('hp máximo')) {
+            score += 150; // NEW: Huge bonus for % HP damage
+            if (window.DEBUG_SCORING) console.log(`  💀 % HP Damage: +150`);
+        }
+    }
+
+    if (window.DEBUG_SCORING) {
+        console.log(`  ✅ SCORE FINAL: ${score}`);
     }
 
     return score;
