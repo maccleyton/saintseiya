@@ -1,0 +1,1893 @@
+[
+  {
+    "nome": "June de Camaleão",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "bateria",
+      "cura",
+      "cc",
+      "escudo"
+    ],
+    "classe": "bronze",
+    "id": 1,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Bronze_June.webp"
+  },
+  {
+    "nome": "Tenma de Pégaso",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "imortalidade",
+      "debuff",
+      "aoe"
+    ],
+    "classe": "bronze",
+    "id": 2,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Bronze_Tenma.webp"
+  },
+  {
+    "nome": "Hyoga de Cisne",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "congelamento",
+      "aoe"
+    ],
+    "classe": "bronze",
+    "id": 3,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Bronze_Hyoga.webp"
+  },
+  {
+    "nome": "Shiryu de Dragão",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "compartilha_dano",
+      "debuff"
+    ],
+    "classe": "bronze",
+    "id": 4,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Bronze_Shiryu.webp"
+  },
+  {
+    "nome": "Shun de Andrômeda",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "defesa",
+      "reflexao_dano",
+      "anti_cc"
+    ],
+    "classe": "bronze",
+    "id": 5,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Bronze_Shun.webp"
+  },
+  {
+    "nome": "Tremy de Flecha",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "high_dps",
+      "critico",
+      "execute"
+    ],
+    "classe": "prata",
+    "id": 6,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Tremy.webp"
+  },
+  {
+    "nome": "Algethi de Hércules",
+    "elemento": "fogo",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "dano_hp",
+      "anti_cc"
+    ],
+    "classe": "prata",
+    "id": 7,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Algethi.webp"
+  },
+  {
+    "nome": "Algol de Perseu",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "petrificacao",
+      "cc",
+      "anti_passiva"
+    ],
+    "classe": "prata",
+    "id": 8,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Algol.webp"
+  },
+  {
+    "nome": "Asterion de Cães de Caça",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "rastreamento",
+      "anti_esquiva",
+      "mark"
+    ],
+    "classe": "prata",
+    "id": 9,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Asterion.webp"
+  },
+  {
+    "nome": "Babel de Centauro",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "queimadura",
+      "aoe",
+      "dot"
+    ],
+    "classe": "prata",
+    "id": 10,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Babel.webp"
+  },
+  {
+    "nome": "Capella de Auriga",
+    "elemento": "terra",
+    "funcao": "mago",
+    "tags": [
+      "disco",
+      "aoe",
+      "cc"
+    ],
+    "classe": "prata",
+    "id": 11,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Capella.webp"
+  },
+  {
+    "nome": "Dante de Cérbero",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "multi_hit",
+      "queimadura",
+      "velocidade"
+    ],
+    "classe": "prata",
+    "id": 12,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Dante.webp"
+  },
+  {
+    "nome": "Dio de Mosca",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "velocidade",
+      "multi_hit",
+      "evasao"
+    ],
+    "classe": "prata",
+    "id": 13,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Dio.webp"
+  },
+  {
+    "nome": "Hakurei de Altar",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "god_slayer",
+      "critico",
+      "anti_divino"
+    ],
+    "classe": "prata",
+    "id": 14,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Hakurei.webp"
+  },
+  {
+    "nome": "Jamian de Corvo",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "cegueira",
+      "cc",
+      "anti_acuracia"
+    ],
+    "classe": "prata",
+    "id": 15,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Jamian.webp"
+  },
+  {
+    "nome": "Marin de Águia",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "esquiva",
+      "counter",
+      "velocidade"
+    ],
+    "classe": "prata",
+    "id": 16,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Marin.webp"
+  },
+  {
+    "nome": "Misty de Lagarto",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "escudo",
+      "cura",
+      "anti_cc"
+    ],
+    "classe": "prata",
+    "id": 17,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Misty.webp"
+  },
+  {
+    "nome": "Moses de Baleia",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "regen",
+      "escudo"
+    ],
+    "classe": "prata",
+    "id": 18,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Moses.webp"
+  },
+  {
+    "nome": "Orfeu de Lira",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "reduz_defesa",
+      "cc",
+      "controle_total"
+    ],
+    "classe": "prata",
+    "id": 19,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Orphee.webp"
+  },
+  {
+    "nome": "Shaina de Ofiúco",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "high_dps",
+      "execute",
+      "anti_mulher"
+    ],
+    "classe": "prata",
+    "id": 20,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Shaina.webp"
+  },
+  {
+    "nome": "Sirius de Cão Maior",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "velocidade",
+      "burst",
+      "execute"
+    ],
+    "classe": "prata",
+    "id": 21,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Sirius.webp"
+  },
+  {
+    "nome": "Suikyo de Taça",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "cura",
+      "sacrificio",
+      "suporte"
+    ],
+    "classe": "prata",
+    "id": 22,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Prata_Suikyo.webp"
+  },
+  {
+    "nome": "Mu de Áries",
+    "elemento": "fogo",
+    "funcao": "suporte",
+    "tags": [
+      "escudo_cristal",
+      "teletransporte",
+      "purificacao"
+    ],
+    "classe": "ouro",
+    "id": 23,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Mu.webp"
+  },
+  {
+    "nome": "Aldebaran de Touro",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "knockback",
+      "muro"
+    ],
+    "classe": "ouro",
+    "id": 24,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Aldebaran.webp"
+  },
+  {
+    "nome": "Saga Maligno de Gêmeos",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "explosao_galactica",
+      "anti_cura",
+      "high_dps"
+    ],
+    "classe": "ouro",
+    "id": 25,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Saga_Maligno.webp"
+  },
+  {
+    "nome": "Saga de Gêmeos",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "explosao_galactica",
+      "campo",
+      "aoe"
+    ],
+    "classe": "ouro",
+    "id": 26,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Saga.webp"
+  },
+  {
+    "nome": "Máscara da Morte de Câncer",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "banimento",
+      "dreno_energia",
+      "anti_ult"
+    ],
+    "classe": "ouro",
+    "id": 27,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Mascara_da_Morte.webp"
+  },
+  {
+    "nome": "Aiolia de Leão",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "velocidade_extrema",
+      "plasma",
+      "vulnerabilidade"
+    ],
+    "classe": "ouro",
+    "id": 28,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Aiolia.webp"
+  },
+  {
+    "nome": "Shaka de Virgem",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "anulacao_habilidade",
+      "cc",
+      "tesouro_ceu"
+    ],
+    "classe": "ouro",
+    "id": 29,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shaka.webp"
+  },
+  {
+    "nome": "Shaka Arayashiki",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "nirvana",
+      "purificacao",
+      "campo"
+    ],
+    "classe": "ouro",
+    "id": 30,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shaka_Arayashik.webp"
+  },
+  {
+    "nome": "Dohko de Libra",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "counter",
+      "cinco_picos",
+      "escalavel"
+    ],
+    "classe": "ouro",
+    "id": 31,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Dohko.webp"
+  },
+  {
+    "nome": "Milo de Escorpião",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "agulha_escarlate",
+      "veneno",
+      "execute"
+    ],
+    "classe": "ouro",
+    "id": 32,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Milo.webp"
+  },
+  {
+    "nome": "Aiolos de Sagitário",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "flecha_dourada",
+      "burst",
+      "execute"
+    ],
+    "classe": "ouro",
+    "id": 33,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Aiolos.webp"
+  },
+  {
+    "nome": "Shura de Capricórnio",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "excalibur",
+      "execute",
+      "dano_real"
+    ],
+    "classe": "ouro",
+    "id": 34,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shura.webp"
+  },
+  {
+    "nome": "Camus de Aquário",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "congelamento",
+      "aoe",
+      "execucao_aurora"
+    ],
+    "classe": "ouro",
+    "id": 35,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Camus.webp"
+  },
+  {
+    "nome": "Afrodite de Peixes",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "veneno",
+      "rosa",
+      "beleza"
+    ],
+    "classe": "ouro",
+    "id": 36,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Afrodite.webp"
+  },
+  {
+    "nome": "Kanon de Gêmeos",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "triangulo_dourado",
+      "explosao_galactica",
+      "redencao"
+    ],
+    "classe": "ouro",
+    "id": 37,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Kanon.webp"
+  },
+  {
+    "nome": "Ikki de Leão",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "queimadura",
+      "chamas",
+      "herdeiro"
+    ],
+    "classe": "ouro",
+    "id": 38,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Ikki.webp"
+  },
+  {
+    "nome": "Shun de Virgem",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "correntes",
+      "tempestade",
+      "defesa"
+    ],
+    "classe": "ouro",
+    "id": 39,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shun.webp"
+  },
+  {
+    "nome": "Shiryu de Libra",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "dragao",
+      "escudo",
+      "herdeiro"
+    ],
+    "classe": "ouro",
+    "id": 40,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shiryu.webp"
+  },
+  {
+    "nome": "Seiya de Sagitário",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "meteoro",
+      "flecha",
+      "legado"
+    ],
+    "classe": "ouro",
+    "id": 41,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Seiya.webp"
+  },
+  {
+    "nome": "Hyoga de Aquário",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "zero_absoluto",
+      "congelamento",
+      "po_diamante"
+    ],
+    "classe": "ouro",
+    "id": 42,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Hyoga.webp"
+  },
+  {
+    "nome": "Shion de Áries",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "escudo",
+      "reconstituicao",
+      "grande_mestre"
+    ],
+    "classe": "ouro",
+    "id": 43,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shion.webp"
+  },
+  {
+    "nome": "Ox de Touro",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "veterano",
+      "defesa"
+    ],
+    "classe": "ouro",
+    "id": 44,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Ox.webp"
+  },
+  {
+    "nome": "Kain & Abel de Gêmeos",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "paradoxo",
+      "dual",
+      "campo"
+    ],
+    "classe": "ouro",
+    "id": 45,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Kain-Abel.webp"
+  },
+  {
+    "nome": "Contador da Morte de Câncer",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "ataude",
+      "banimento",
+      "anti_revive"
+    ],
+    "classe": "ouro",
+    "id": 46,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Contador_da_Morte.webp"
+  },
+  {
+    "nome": "Kaiser de Leão",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "fera",
+      "transformacao",
+      "high_dps"
+    ],
+    "classe": "ouro",
+    "id": 47,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Kaiser.webp"
+  },
+  {
+    "nome": "Shijima de Virgem",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "quatro_portas",
+      "buda",
+      "purificacao"
+    ],
+    "classe": "ouro",
+    "id": 48,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Shijima.webp"
+  },
+  {
+    "nome": "Ecarlate de Escorpião",
+    "elemento": "terra",
+    "funcao": "assassino",
+    "tags": [
+      "sangue_cristal",
+      "veneno",
+      "execute"
+    ],
+    "classe": "ouro",
+    "id": 49,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Ecarlate.webp"
+  },
+  {
+    "nome": "Gestalt de Sagitário",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "centauro",
+      "flecha",
+      "aoe"
+    ],
+    "classe": "ouro",
+    "id": 50,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Gestalt.webp"
+  },
+  {
+    "nome": "Izo de Capricórnio",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "cortador",
+      "execute",
+      "anti_demonio"
+    ],
+    "classe": "ouro",
+    "id": 51,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Izo.webp"
+  },
+  {
+    "nome": "Mystoria de Aquário",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "gelo",
+      "executor",
+      "congelamento"
+    ],
+    "classe": "ouro",
+    "id": 52,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Mystoria.webp"
+  },
+  {
+    "nome": "Cardinale de Peixes",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "rosa_funebre",
+      "veneno",
+      "campo"
+    ],
+    "classe": "ouro",
+    "id": 53,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Cardinale.webp"
+  },
+  {
+    "nome": "Odisseu de Ofiúco",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "serpente",
+      "cura",
+      "purificacao"
+    ],
+    "classe": "ouro",
+    "id": 54,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Odisseu.webp"
+  },
+  {
+    "nome": "Albafica de Peixes",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "veneno_solitario",
+      "sacrificio",
+      "campo"
+    ],
+    "classe": "ouro",
+    "id": 55,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Ouro_Albafica.webp"
+  },
+  {
+    "nome": "Thetis de Sereia",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "bateria",
+      "vinculo",
+      "buff_atributos",
+      "protecao"
+    ],
+    "classe": "marina",
+    "id": 56,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Thetis.webp"
+  },
+  {
+    "nome": "Bian de Cavalo-Marinho",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "bloqueio_hits",
+      "slow",
+      "anti_ritmo",
+      "cc_imune"
+    ],
+    "classe": "marina",
+    "id": 57,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Bian.webp"
+  },
+  {
+    "nome": "Krishna de Chrysaor",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "high_dps",
+      "critico",
+      "execute"
+    ],
+    "classe": "marina",
+    "id": 58,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Krishna.webp"
+  },
+  {
+    "nome": "Isaac de Kraken",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "congelamento",
+      "cc",
+      "anti_cura"
+    ],
+    "classe": "marina",
+    "id": 59,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Isaac.webp"
+  },
+  {
+    "nome": "Io de Scylla",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "veneno",
+      "dot",
+      "anti_cura",
+      "execute"
+    ],
+    "classe": "marina",
+    "id": 60,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Io.webp"
+  },
+  {
+    "nome": "Kasa de Lymnades",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "anti_buff",
+      "dispel",
+      "anti_passiva"
+    ],
+    "classe": "marina",
+    "id": 61,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Kasa.webp"
+  },
+  {
+    "nome": "Sorento de Sirene",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "silencio",
+      "charm",
+      "roubo_energia",
+      "anti_cura"
+    ],
+    "classe": "marina",
+    "id": 62,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Sorento.webp"
+  },
+  {
+    "nome": "Kanon de Dragão-Marinho",
+    "elemento": "trevas",
+    "funcao": "assassino",
+    "tags": [
+      "charm",
+      "banimento",
+      "execute",
+      "queima_energia"
+    ],
+    "classe": "marina",
+    "id": 63,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Marina_Kanon.webp"
+  },
+  {
+    "nome": "Aiacos de Garuda",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "velocidade_extrema",
+      "multi_hit",
+      "execute"
+    ],
+    "classe": "espectro",
+    "id": 64,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Aiacos.webp"
+  },
+  {
+    "nome": "Minos de Griffon",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "controle_mental",
+      "marionete",
+      "cc"
+    ],
+    "classe": "espectro",
+    "id": 65,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Minos.webp"
+  },
+  {
+    "nome": "Radamanthys de Wyvern",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "high_dps",
+      "julgamento",
+      "execute"
+    ],
+    "classe": "espectro",
+    "id": 66,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Radamanthys.webp"
+  },
+  {
+    "nome": "Pandora",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "buff",
+      "invocacao",
+      "campo"
+    ],
+    "classe": "espectro",
+    "id": 67,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Pandora.webp"
+  },
+  {
+    "nome": "Charon de Aqueronte",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "counter",
+      "dreno_energia",
+      "anti_ult"
+    ],
+    "classe": "espectro",
+    "id": 68,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Charon.webp"
+  },
+  {
+    "nome": "Farao de Esfinge",
+    "elemento": "terra",
+    "funcao": "mago",
+    "tags": [
+      "silencio",
+      "cc",
+      "enigma"
+    ],
+    "classe": "espectro",
+    "id": 69,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Farao.webp"
+  },
+  {
+    "nome": "Giganto de Ciclope",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "knockback",
+      "guarda_costas"
+    ],
+    "classe": "espectro",
+    "id": 70,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Giganto.webp"
+  },
+  {
+    "nome": "Lune de Balron",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "silencio",
+      "anti_energia",
+      "julgamento"
+    ],
+    "classe": "espectro",
+    "id": 71,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Lune.webp"
+  },
+  {
+    "nome": "Myu de Papillon",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "ilusao",
+      "cc",
+      "veneno"
+    ],
+    "classe": "espectro",
+    "id": 72,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Myu.webp"
+  },
+  {
+    "nome": "Niobe de Deep",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "veneno",
+      "dot",
+      "anti_cura"
+    ],
+    "classe": "espectro",
+    "id": 73,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Niobe.webp"
+  },
+  {
+    "nome": "Queen de Alraune",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "vampirismo",
+      "dreno_vida",
+      "execute"
+    ],
+    "classe": "espectro",
+    "id": 74,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Queen.webp"
+  },
+  {
+    "nome": "Raimi de Verme",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "parasita",
+      "roubo_buff",
+      "debuff"
+    ],
+    "classe": "espectro",
+    "id": 75,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Raimi.webp"
+  },
+  {
+    "nome": "Sylphid de Basilisco",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "veneno",
+      "petrificacao",
+      "cc"
+    ],
+    "classe": "espectro",
+    "id": 76,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Sylphid.webp"
+  },
+  {
+    "nome": "Zelos de Sapo",
+    "elemento": "terra",
+    "funcao": "assassino",
+    "tags": [
+      "execute",
+      "oportunista",
+      "low_hp"
+    ],
+    "classe": "espectro",
+    "id": 77,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Zelos.webp"
+  },
+  {
+    "nome": "Shion Espectro",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "escudo",
+      "reconstituicao",
+      "sapuris"
+    ],
+    "classe": "espectro",
+    "id": 78,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Shion.webp"
+  },
+  {
+    "nome": "Pandora (ND)",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "invocacao",
+      "buff",
+      "campo"
+    ],
+    "classe": "espectro",
+    "id": 79,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Pandora.webp"
+  },
+  {
+    "nome": "Chagall de Wyvern",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "furia",
+      "escalavel",
+      "high_dps"
+    ],
+    "classe": "espectro",
+    "id": 80,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Chagall.webp"
+  },
+  {
+    "nome": "Suikyo de Garuda",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "critico_100",
+      "hp_scaling",
+      "anti_cura"
+    ],
+    "classe": "espectro",
+    "id": 81,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Suikyo.webp"
+  },
+  {
+    "nome": "Kagaho de Benu",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "revive",
+      "queimadura",
+      "campo"
+    ],
+    "classe": "espectro",
+    "id": 82,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Espectro_Kagaho.webp"
+  },
+  {
+    "nome": "Hyoga de Cisne Divino",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "congelamento_absoluto",
+      "anti_cura",
+      "dano_real",
+      "cc"
+    ],
+    "classe": "divino",
+    "id": 83,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Hyoga.webp"
+  },
+  {
+    "nome": "Ikki de Fênix Divino",
+    "elemento": "luz",
+    "funcao": "assassino",
+    "tags": [
+      "revive",
+      "queimadura",
+      "queima_cosmo",
+      "debuff_ataque"
+    ],
+    "classe": "divino",
+    "id": 84,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Ikki.webp"
+  },
+  {
+    "nome": "Seiya de Pégaso Divino",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "duelo",
+      "counter",
+      "velocidade",
+      "scaling"
+    ],
+    "classe": "divino",
+    "id": 85,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Seiya.webp"
+  },
+  {
+    "nome": "Shiryu de Dragão Divino",
+    "elemento": "luz",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "counter",
+      "dano_hp",
+      "imortalidade"
+    ],
+    "classe": "divino",
+    "id": 86,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Shiryu.webp"
+  },
+  {
+    "nome": "Shun de Andrômeda Divino",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "correntes",
+      "cc",
+      "anti_burst",
+      "reflexao"
+    ],
+    "classe": "divino",
+    "id": 87,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Shun.webp"
+  },
+  {
+    "nome": "Mu de Áries Divino",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "escudo_irremovivel",
+      "purificacao",
+      "teletransporte"
+    ],
+    "classe": "divino",
+    "id": 88,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Mu.webp"
+  },
+  {
+    "nome": "Aldebaran de Touro Divino",
+    "elemento": "luz",
+    "funcao": "tanque",
+    "tags": [
+      "high_hp",
+      "dano_hp",
+      "knockback",
+      "imortalidade"
+    ],
+    "classe": "divino",
+    "id": 89,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Aldebaran.webp"
+  },
+  {
+    "nome": "Aiolia de Leão Divino",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "velocidade_extrema",
+      "vulnerabilidade",
+      "aoe",
+      "burst"
+    ],
+    "classe": "divino",
+    "id": 90,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Aiolia.webp"
+  },
+  {
+    "nome": "Dohko de Libra Divino",
+    "elemento": "luz",
+    "funcao": "tanque",
+    "tags": [
+      "counter",
+      "buff_global",
+      "defesa",
+      "escalavel"
+    ],
+    "classe": "divino",
+    "id": 91,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Dohko.webp"
+  },
+  {
+    "nome": "Milo de Escorpião Divino",
+    "elemento": "trevas",
+    "funcao": "assassino",
+    "tags": [
+      "veneno_acumulativo",
+      "execute",
+      "anti_tanque"
+    ],
+    "classe": "divino",
+    "id": 92,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Milo.webp"
+  },
+  {
+    "nome": "Shura de Capricórnio Divino",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "execute",
+      "dano_real",
+      "anti_escudo",
+      "critico"
+    ],
+    "classe": "divino",
+    "id": 93,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Shura.webp"
+  },
+  {
+    "nome": "Camus de Aquário Divino",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "congelamento",
+      "glaciacao",
+      "aoe",
+      "campo"
+    ],
+    "classe": "divino",
+    "id": 94,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Camus.webp"
+  },
+  {
+    "nome": "Afrodite de Peixes Divino",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "veneno",
+      "dot",
+      "anti_cura",
+      "campo"
+    ],
+    "classe": "divino",
+    "id": 95,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Divino_Afrodite.webp"
+  },
+  {
+    "nome": "Alone",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "imunidade_global",
+      "dreno_vida",
+      "dano_real",
+      "campo"
+    ],
+    "classe": "deus",
+    "id": 96,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Alone.webp"
+  },
+  {
+    "nome": "Saori Kido",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "cura",
+      "imortalidade",
+      "purificacao",
+      "buff"
+    ],
+    "classe": "deus",
+    "id": 97,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Saori.webp"
+  },
+  {
+    "nome": "Shun (Hades)",
+    "elemento": "trevas",
+    "funcao": "tanque",
+    "tags": [
+      "imortalidade",
+      "campo",
+      "revive",
+      "escudo"
+    ],
+    "classe": "deus",
+    "id": 98,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Hades.webp"
+  },
+  {
+    "nome": "Poseidon",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "campo",
+      "aoe",
+      "cc",
+      "dano_progressivo"
+    ],
+    "classe": "deus",
+    "id": 99,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Poseidon.webp"
+  },
+  {
+    "nome": "Hypnos",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "cura_massiva",
+      "sono",
+      "campo",
+      "bateria"
+    ],
+    "classe": "deus",
+    "id": 100,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Hypnos.webp"
+  },
+  {
+    "nome": "Thanatos",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "execute",
+      "banimento",
+      "anti_revive",
+      "dano_real"
+    ],
+    "classe": "deus",
+    "id": 101,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Thanatos.webp"
+  },
+  {
+    "nome": "Hades",
+    "elemento": "trevas",
+    "funcao": "tanque",
+    "tags": [
+      "imortalidade",
+      "campo",
+      "dreno_vida",
+      "debuff"
+    ],
+    "classe": "deus",
+    "id": 102,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Hades.webp"
+  },
+  {
+    "nome": "Atena",
+    "elemento": "luz",
+    "funcao": "tanque",
+    "tags": [
+      "escudo_global",
+      "purificacao",
+      "anti_cc",
+      "buff"
+    ],
+    "classe": "deus",
+    "id": 103,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Atena.webp"
+  },
+  {
+    "nome": "Artemis",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "campo",
+      "dispel",
+      "marca",
+      "dano_real"
+    ],
+    "classe": "deus",
+    "id": 104,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Artemis.webp"
+  },
+  {
+    "nome": "Apolo",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "queimadura",
+      "transformacao",
+      "anti_campo",
+      "escalavel"
+    ],
+    "classe": "deus",
+    "id": 105,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Deus_Apolo.webp"
+  },
+  {
+    "nome": "Callisto",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "buff_single",
+      "vinculo_dano",
+      "purificacao",
+      "aceleracao"
+    ],
+    "classe": "outros",
+    "id": 106,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Callisto.webp"
+  },
+  {
+    "nome": "Toma",
+    "elemento": "luz",
+    "funcao": "assassino",
+    "tags": [
+      "dano_real",
+      "anti_burst",
+      "penas",
+      "regen"
+    ],
+    "classe": "outros",
+    "id": 107,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Toma.webp"
+  },
+  {
+    "nome": "Shiryu (LC)",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "cc",
+      "counter",
+      "dreno_cosmo"
+    ],
+    "classe": "outros",
+    "id": 108,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Shiryu.webp"
+  },
+  {
+    "nome": "Seiya (LC)",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "high_dps",
+      "critico",
+      "mobilidade"
+    ],
+    "classe": "outros",
+    "id": 109,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Seiya.webp"
+  },
+  {
+    "nome": "Shun (LC)",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "correntes",
+      "cc",
+      "anti_dano",
+      "reflexao"
+    ],
+    "classe": "outros",
+    "id": 110,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Shun.webp"
+  },
+  {
+    "nome": "Shion (LC)",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "dano_progressivo",
+      "escudo",
+      "reconstituicao"
+    ],
+    "classe": "outros",
+    "id": 111,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Shion.webp"
+  },
+  {
+    "nome": "Sasha",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "reflexao_dano",
+      "escudo",
+      "anti_cc",
+      "marca"
+    ],
+    "classe": "outros",
+    "id": 112,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Sasha.webp"
+  },
+  {
+    "nome": "Mestre Anciao",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "revive",
+      "buff_global",
+      "cura",
+      "escudo"
+    ],
+    "classe": "outros",
+    "id": 113,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Mestre_Anciao.webp"
+  },
+  {
+    "nome": "Lascoumoune",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "roubo_status",
+      "marca_lunar",
+      "mobilidade"
+    ],
+    "classe": "outros",
+    "id": 114,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Lascoumune.webp"
+  },
+  {
+    "nome": "Hyoga (LC)",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "congelamento",
+      "bateria",
+      "salva_vidas",
+      "cc"
+    ],
+    "classe": "outros",
+    "id": 115,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Hyoga.webp"
+  },
+  {
+    "nome": "Hécate",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "ilusao",
+      "roubo_haste",
+      "dispel",
+      "revive"
+    ],
+    "classe": "outros",
+    "id": 116,
+    "disponivel": true,
+    "armadura": 0,
+    "constelacao": "0p",
+    "imagem": "assets/Outros_Hecate.webp"
+  }
+]

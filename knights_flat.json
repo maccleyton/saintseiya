@@ -1,0 +1,3929 @@
+[
+  {
+    "id": 1,
+    "nome": "June de Camaleão",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Tenma de Pégaso",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Hyoga",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "passiva_forte"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 4,
+    "nome": "Shiryu",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-speed",
+      "execução"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 5,
+    "nome": "Shun",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "execução",
+      "foco",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 6,
+    "nome": "Ptolemy de Sagita",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "bateria",
+      "energia",
+      "abertura",
+      "passiva_forte"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 7,
+    "nome": "Algethi de Hércules",
+    "elemento": "fogo",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "lockdown",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 8,
+    "nome": "Algol de Perseu",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "lockdown",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 9,
+    "nome": "Asterion de Cães de Caça",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "purificação",
+      "dispel",
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 10,
+    "nome": "Babel de Centauro",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "dot",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "veneno"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 11,
+    "nome": "Capella de Auriga",
+    "elemento": "terra",
+    "funcao": "mago",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "sustentação",
+      "aoe"
+    ],
+    "countera": [
+      "atrito",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 12,
+    "nome": "Dante de Cérbero",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte",
+      "aoe",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 13,
+    "nome": "Dio de Mosca",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 14,
+    "nome": "Hakurei de Altar",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "bateria",
+      "energia",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 15,
+    "nome": "Jamian de Corvo",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 16,
+    "nome": "Marin de Águia",
+    "elemento": "vento",
+    "funcao": "dps",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 17,
+    "nome": "Misty de Lagarto",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "nega_dano",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "burst"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 18,
+    "nome": "Moses de Baleia",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 19,
+    "nome": "Orfeu de Lira",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "energia",
+      "bateria",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 20,
+    "nome": "Shaina de Ofiúco",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 21,
+    "nome": "Sirius de Cão Maior",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "cc",
+      "abertura",
+      "passiva_forte",
+      "controle",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 22,
+    "nome": "Suikyō de Taça",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "purificação",
+      "dispel",
+      "dano_real",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "ignore_defesa"
+    ],
+    "countera": [
+      "escudo",
+      "low_hp",
+      "tanque"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 23,
+    "nome": "Mu de Áries",
+    "elemento": "fogo",
+    "funcao": "suporte",
+    "tags": [
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 24,
+    "nome": "Aldebaran de Touro",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-speed",
+      "execução"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 25,
+    "nome": "Saga Maligno de Gêmeos",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 26,
+    "nome": "Saga de Gêmeos",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "cc",
+      "energia",
+      "bateria",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown"
+    ],
+    "countera": [
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 27,
+    "nome": "Máscara da Morte de Câncer",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 28,
+    "nome": "Aiolia de Leão",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 29,
+    "nome": "Shaka de Virgem",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 30,
+    "nome": "Shaka·Alaya",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 31,
+    "nome": "Dohko de Libra",
+    "elemento": "vento",
+    "funcao": "dps",
+    "tags": [
+      "passiva_forte",
+      "abertura",
+      "aoe",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 32,
+    "nome": "Milo de Escorpião",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte",
+      "abertura",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 33,
+    "nome": "Aiolos de Sagitário",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "veneno",
+      "dot",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 34,
+    "nome": "Shura de Capricórnio",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação"
+    ],
+    "countera": [
+      "low_hp",
+      "atrito"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 35,
+    "nome": "Camus de Aquário",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "gelo",
+      "congelar",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 36,
+    "nome": "Afrodite de Peixes",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "sustentação",
+      "aoe"
+    ],
+    "countera": [
+      "atrito",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 37,
+    "nome": "Kanon de Gêmeos",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown"
+    ],
+    "countera": [
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 38,
+    "nome": "Ikki de Leão",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 39,
+    "nome": "Shun de Virgem",
+    "elemento": "fogo",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 40,
+    "nome": "Shiryu de Libra",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "nega_dano",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "atrito",
+      "burst"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-cura"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 41,
+    "nome": "Seiya de Sagitário",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 42,
+    "nome": "Hyoga de Aquário",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "cura",
+      "passiva_forte",
+      "aoe",
+      "controle",
+      "velocidade"
+    ],
+    "ameacas": [
+      "sustentação",
+      "burst_magico",
+      "lockdown",
+      "aoe",
+      "speed_cleave"
+    ],
+    "countera": [
+      "atrito",
+      "setup_lento",
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "dispel",
+      "anti-mago",
+      "anti-speed",
+      "anti-cc"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 43,
+    "nome": "Shion de Áries",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "atrito",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "anti-cura",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 44,
+    "nome": "Ox de Touro",
+    "elemento": "terra",
+    "funcao": "dps",
+    "tags": [
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "execução",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 45,
+    "nome": "Kain & Abel de Gêmeos",
+    "elemento": "trevas",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 46,
+    "nome": "Contador da Morte de Câncer",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "dano_real",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "ignore_defesa",
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "escudo",
+      "tanque",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 47,
+    "nome": "Kaiser de Leão",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "cc",
+      "energia",
+      "bateria",
+      "purificação",
+      "dispel",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 48,
+    "nome": "Shijima de Virgem",
+    "elemento": "vento",
+    "funcao": "dps",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 49,
+    "nome": "Écarlate de Escorpião",
+    "elemento": "terra",
+    "funcao": "assassino",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 50,
+    "nome": "Gestalt de Sagitário",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 51,
+    "nome": "Izo de Capricórnio",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "escudo",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "nega_dano"
+    ],
+    "countera": [
+      "low_hp",
+      "burst"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "dano_real"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 52,
+    "nome": "Mystoria de Aquário",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "escudo",
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "nega_dano",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "burst"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 53,
+    "nome": "Cardinale de Peixes",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte",
+      "abertura",
+      "aoe",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 54,
+    "nome": "Albafica de Peixes",
+    "elemento": "agua",
+    "funcao": "mago",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 55,
+    "nome": "Thetis de Sereia",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 56,
+    "nome": "Bian de Cavalo Marinho",
+    "elemento": "vento",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "lockdown",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 57,
+    "nome": "Krishna de Chrysaor",
+    "elemento": "fogo",
+    "funcao": "guerreiro",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 58,
+    "nome": "Io de Scylla",
+    "elemento": "agua",
+    "funcao": "assassino",
+    "tags": [
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 59,
+    "nome": "Isaac de Kraken",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "cc",
+      "gelo",
+      "congelar",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown"
+    ],
+    "countera": [
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 60,
+    "nome": "Kasa de Lymnades",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 61,
+    "nome": "Sorento de Sirene",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "abertura",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "atrito",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "anti-cura",
+      "foco",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 62,
+    "nome": "Pandora",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "atrito",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "anti-cura",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 63,
+    "nome": "Charon de Aqueronte",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "execução",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 64,
+    "nome": "Faraó de Esfinge",
+    "elemento": "terra",
+    "funcao": "assassino",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "abertura",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "atrito"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 65,
+    "nome": "Giganto de Ciclope",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 66,
+    "nome": "Lune de Balron",
+    "elemento": "fogo",
+    "funcao": "suporte",
+    "tags": [
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 67,
+    "nome": "Myu de Papillon",
+    "elemento": "vento",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 68,
+    "nome": "Niobe de Deep",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 69,
+    "nome": "Queen de Alraune",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "veneno",
+      "dot",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 70,
+    "nome": "Raimi de Verme",
+    "elemento": "terra",
+    "funcao": "assassino",
+    "tags": [
+      "cura",
+      "dano_real",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação",
+      "ignore_defesa"
+    ],
+    "countera": [
+      "escudo",
+      "low_hp",
+      "atrito",
+      "tanque"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 71,
+    "nome": "Sylphid de Basilisco",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "cura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação"
+    ],
+    "countera": [
+      "low_hp",
+      "atrito"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 72,
+    "nome": "Zelos de Sapo",
+    "elemento": "terra",
+    "funcao": "tanque",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 73,
+    "nome": "Shion de Áries",
+    "elemento": "fogo",
+    "funcao": "tanque",
+    "tags": [
+      "escudo",
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "nega_dano",
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico",
+      "burst"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 74,
+    "nome": "Hyoga de Cisne",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "lockdown",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 75,
+    "nome": "Ikki de Fênix",
+    "elemento": "fogo",
+    "funcao": "assassino",
+    "tags": [
+      "cc",
+      "energia",
+      "bateria",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 76,
+    "nome": "Seiya de Pégaso",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe",
+      "velocidade"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "execução",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 77,
+    "nome": "Shiryu de Dragão",
+    "elemento": "luz",
+    "funcao": "dps",
+    "tags": [
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "execução",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 78,
+    "nome": "Shun de Andrômeda",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "energia",
+      "bateria",
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe",
+      "escudo",
+      "velocidade"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs",
+      "nega_dano",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 79,
+    "nome": "Mu de Áries",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 80,
+    "nome": "Aldebaran de Touro",
+    "elemento": "luz",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "lockdown",
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 81,
+    "nome": "Aiolia de Leão",
+    "elemento": "luz",
+    "funcao": "guerreiro",
+    "tags": [
+      "bateria",
+      "energia",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 82,
+    "nome": "Dohko de Libra",
+    "elemento": "fogo",
+    "funcao": "dps",
+    "tags": [
+      "energia",
+      "bateria",
+      "passiva_forte",
+      "aoe",
+      "escudo"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "nega_dano"
+    ],
+    "countera": [
+      "low_hp",
+      "burst"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "dano_real"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 83,
+    "nome": "Milo de Escorpião",
+    "elemento": "luz",
+    "funcao": "assassino",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "lockdown"
+    ],
+    "countera": [
+      "low_hp",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 84,
+    "nome": "Shura de Capricórnio",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 85,
+    "nome": "Camus de Aquário",
+    "elemento": "agua",
+    "funcao": "guerreiro",
+    "tags": [
+      "gelo",
+      "congelar",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 86,
+    "nome": "Afrodite de Peixes",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "purificação",
+      "dispel",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 87,
+    "nome": "Alone",
+    "elemento": "trevas",
+    "funcao": "guerreiro",
+    "tags": [
+      "abertura",
+      "cura",
+      "dano_real",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "ignore_defesa",
+      "sustentação",
+      "high_dps",
+      "foco_single",
+      "speed_cleave"
+    ],
+    "countera": [
+      "low_hp",
+      "atrito",
+      "setup_lento",
+      "tanque",
+      "escudo"
+    ],
+    "counterado_por": [
+      "anti-cura",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 88,
+    "nome": "Saori Kido",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "purificação",
+      "dispel",
+      "imortalidade",
+      "cura",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "atrito",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "anti-cura",
+      "foco",
+      "execução"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 89,
+    "nome": "Shun",
+    "elemento": "trevas",
+    "funcao": "tanque",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 90,
+    "nome": "Poseidon",
+    "elemento": "luz",
+    "funcao": "mago",
+    "tags": [
+      "dot",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "veneno"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "speed_cleave",
+      "aoe"
+    ],
+    "countera": [
+      "setup_lento",
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 91,
+    "nome": "Hypnos",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "energia",
+      "bateria",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "velocidade"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 92,
+    "nome": "Thanatos",
+    "elemento": "trevas",
+    "funcao": "mago",
+    "tags": [
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "sustentação",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "execução",
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 93,
+    "nome": "Hades",
+    "elemento": "trevas",
+    "funcao": "tanque",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico"
+    ],
+    "counterado_por": [
+      "anti-tank",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 94,
+    "nome": "Atena",
+    "elemento": "fogo",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "energia",
+      "bateria",
+      "abertura",
+      "passiva_forte",
+      "aoe",
+      "controle"
+    ],
+    "ameacas": [
+      "lockdown",
+      "speed_cleave",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "setup_lento",
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 95,
+    "nome": "Callisto",
+    "elemento": "luz",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 96,
+    "nome": "Tōma",
+    "elemento": "luz",
+    "funcao": "assassino",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 97,
+    "nome": "Shun",
+    "elemento": "terra",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 98,
+    "nome": "Shiryu",
+    "elemento": "agua",
+    "funcao": "tanque",
+    "tags": [
+      "cc",
+      "controle",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "lockdown",
+      "stall",
+      "absorve_dano"
+    ],
+    "countera": [
+      "burst_fisico",
+      "mobilidade"
+    ],
+    "counterado_por": [
+      "anti-cc",
+      "anti-tank",
+      "dano_real"
+    ],
+    "fase_forte": "late",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 99,
+    "nome": "Shion",
+    "elemento": "terra",
+    "funcao": "guerreiro",
+    "tags": [
+      "escudo",
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "nega_dano",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp",
+      "burst"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "dano_real",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 100,
+    "nome": "Seiya",
+    "elemento": "vento",
+    "funcao": "guerreiro",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps"
+    ],
+    "countera": [
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 101,
+    "nome": "Sasha",
+    "elemento": "luz",
+    "funcao": "dps",
+    "tags": [
+      "energia",
+      "bateria",
+      "purificação",
+      "dispel",
+      "abertura",
+      "imortalidade",
+      "revive",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "sustentação",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "execução",
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 102,
+    "nome": "Mestre Ancião",
+    "elemento": "agua",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 103,
+    "nome": "Lascoumoune",
+    "elemento": "vento",
+    "funcao": "assassino",
+    "tags": [
+      "abertura",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "foco_single",
+      "high_dps",
+      "speed_cleave"
+    ],
+    "countera": [
+      "setup_lento",
+      "low_hp"
+    ],
+    "counterado_por": [
+      "escudo",
+      "tanque",
+      "anti-speed"
+    ],
+    "fase_forte": "early",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 104,
+    "nome": "Hyoga",
+    "elemento": "vento",
+    "funcao": "mago",
+    "tags": [
+      "energia",
+      "gelo",
+      "bateria",
+      "congelar",
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "burst_magico",
+      "aoe"
+    ],
+    "countera": [
+      "agrupado"
+    ],
+    "counterado_por": [
+      "dispel",
+      "anti-mago"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  },
+  {
+    "id": 105,
+    "nome": "Hécate",
+    "elemento": "trevas",
+    "funcao": "suporte",
+    "tags": [
+      "passiva_forte",
+      "aoe"
+    ],
+    "ameacas": [
+      "sustentação",
+      "buffs"
+    ],
+    "countera": [
+      "dano_continuo"
+    ],
+    "counterado_por": [
+      "assassino",
+      "foco"
+    ],
+    "fase_forte": "mid",
+    "disponivel": true,
+    "armadura": {
+      "nivel_10": false,
+      "nivel_20": false,
+      "nivel_30": false,
+      "nivel_40": false
+    },
+    "constelacao": {
+      "efeito_3p": false,
+      "efeito_9p": false
+    }
+  }
+]
